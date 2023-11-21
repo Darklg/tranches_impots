@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <title>Impots sur le revenu</title>
 <meta name="viewport" content="width=device-width" />
-<link rel="stylesheet" type="text/css" href="assets/style.css" />
-<script src="assets/tools.js"></script>
-<script src="assets/script.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/style.css?v=20231121170025" />
+<script src="assets/tools.js?v=20231121170025"></script>
+<script src="assets/script.js?v=20231121170025"></script>
 </head>
 <body>
 <h1>Impots sur le revenu</h1>
@@ -14,15 +14,15 @@
     <ul>
         <li class="box">
             <label for="revenu_1">Revenu 1</label>
-            <input step="1000" data-watch-change data-jsu-local-storage name="revenu_1" id="revenu_1" type="number" />
+            <input step="100" value="0" min="0" data-watch-change data-jsu-local-storage name="revenu_1" id="revenu_1" type="number" />
         </li>
         <li class="box">
             <label for="revenu_2">Revenu 2</label>
-            <input step="1000" data-watch-change data-jsu-local-storage name="revenu_2" id="revenu_2" type="number" />
+            <input step="100" value="0" min="0" data-watch-change data-jsu-local-storage name="revenu_2" id="revenu_2" type="number" />
         </li>
         <li class="box">
             <label for="childcount">Nombre d'enfants</label>
-            <input step="1" data-watch-change data-jsu-local-storage name="childcount" id="childcount" type="number" />
+            <input step="1" value="0" min="0" data-watch-change data-jsu-local-storage name="childcount" id="childcount" type="number" />
         </li>
     </ul>
 </form>
