@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="fr-FR">
+<head>
+<meta charset="UTF-8" />
+<title>Impots sur le revenu</title>
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" type="text/css" href="assets/style.css" />
+<script src="assets/tools.js"></script>
+<script src="assets/script.js"></script>
+</head>
+<body>
+<h1>Impots sur le revenu</h1>
+<form action="#" method="post">
+    <ul>
+        <li class="box">
+            <label for="revenu_1">Revenu 1</label>
+            <input step="1000" data-watch-change data-jsu-local-storage name="revenu_1" id="revenu_1" type="number" />
+        </li>
+        <li class="box">
+            <label for="revenu_2">Revenu 2</label>
+            <input step="1000" data-watch-change data-jsu-local-storage name="revenu_2" id="revenu_2" type="number" />
+        </li>
+        <li class="box">
+            <label for="childcount">Nombre d'enfants</label>
+            <input step="1" data-watch-change data-jsu-local-storage name="childcount" id="childcount" type="number" />
+        </li>
+    </ul>
+</form>
+
+<div id="result" class="result">
+    <table>
+        <thead>
+            <tr>
+                <th>Revenus séparés</th>
+                <th colspan="999">Revenus en commun</th>
+            </tr>
+            <tr>
+                <th>Référence</th>
+                <th>Moitié-moitié</th>
+                <th>Part sur revenu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="result_sep"></td>
+                <td id="result_half"></td>
+                <td id="result_part"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>

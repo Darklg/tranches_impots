@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 16px;
+}
+
+hr {
+    margin: 2em 0;
+    border: 1px solid #EEE;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+select {
+    height: 1.5em;
+    background-color: transparent;
+}
+
+.button-wrapper {
+    margin: 1em 0;
+    padding-left: 4em;
+}
+
+button {
+    padding: 0 1em;
+    text-align: center;
+    background-color: #EEE;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #CCC;
+}
+
+textarea {
+    width: 100%;
+    padding: .5em;
+    border: 1px solid #CCC;
+}
+
+body {
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 800px;
+}
+
+/* ----------------------------------------------------------
+  Table
+---------------------------------------------------------- */
+
+table {
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.5em;
+    border: 1px solid;
+    text-align: left;
+}
+
+/* ----------------------------------------------------------
+  Input
+---------------------------------------------------------- */
+
+form {
+    margin: 2em;
+}
+
+form li + li {
+    margin-top: 0.5em;
+}
+
+input[type="number"] {
+    border: 1px solid;
+}
+
+.result {
+    padding: 2em;
+    border: 1px solid #CCC;
+    background-color: #EEE;
+}
+
+.item {
+    margin: 1em 0;
+    border: 1px solid #CCC;
+}
