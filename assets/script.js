@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
             window.jsutaxes.numberkids = 0;
         }
 
-        var _revenu1 = parseInt($revenu1.value, 10);
-        var _revenu2 = parseInt($revenu2.value, 10);
+        var _revenu1 = $revenu1.value.length === 0 ? 0 : parseInt($revenu1.value, 10);
+        var _revenu2 = $revenu2.value.length === 0 ? 0 : parseInt($revenu2.value, 10);
         var _total_foyer = (_revenu1 + _revenu2);
 
         if(!_revenu1){
@@ -58,8 +58,10 @@ document.addEventListener("DOMContentLoaded", function() {
         window.jsutaxes.taxcommontotal = window.jsutaxes.taxhalf * 2;
 
         /* Part sur revenus */
-        window.jsutaxes.taxpart1 = _revenu1 / _total_foyer * window.jsutaxes.taxcommontotal;
-        window.jsutaxes.taxpart2 = _revenu2 / _total_foyer * window.jsutaxes.taxcommontotal;
+        var taxpart1 = _revenu1 / _total_foyer * window.jsutaxes.taxcommontotal;
+        var taxpart2 = _revenu2 / _total_foyer * window.jsutaxes.taxcommontotal;
+        window.jsutaxes.taxpart1 = isNaN(taxpart1) ? 0 : taxpart1;
+        window.jsutaxes.taxpart2 = isNaN(taxpart2) ? 0 : taxpart2;
 
         update_content();
     }
