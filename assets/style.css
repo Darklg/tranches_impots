@@ -30,6 +30,7 @@ h5 {
 
 h1 {
     font-size: 2em;
+    line-height: 1;
 }
 
 h2 {
@@ -70,6 +71,10 @@ body {
     max-width: 800px;
 }
 
+small {
+    font-size: 0.8em;
+}
+
 /* ----------------------------------------------------------
   Table
 ---------------------------------------------------------- */
@@ -87,21 +92,64 @@ td {
     text-align: left;
 }
 
+@media (max-width:768px) {
+    th,
+    td {
+        padding: 0.25em;
+    }
+}
+
 /* ----------------------------------------------------------
   Input
 ---------------------------------------------------------- */
 
 form {
-    margin: 2em;
+    margin: 2em 0;
 }
 
-form li + li {
-    margin-top: 0.5em;
+.cssc-form,
+.cssc-form .box {
+    list-style-type: none;
+}
+
+.cssc-form {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:768px) {
+    .cssc-form {
+        flex-direction: column;
+    }
+}
+
+.cssc-form .box {
+    flex: 1;
+}
+
+.cssc-form .box label {
+    display: block;
+    padding-bottom: 0.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0 0.5em;
     border: 1px solid;
+    font-size: 16px;
 }
+
+/* ----------------------------------------------------------
+  Result
+---------------------------------------------------------- */
 
 .result {
     padding: 2em;
@@ -109,7 +157,8 @@ input[type="number"] {
     background-color: #EEE;
 }
 
-.item {
-    margin: 1em 0;
-    border: 1px solid #CCC;
+@media (max-width:768px) {
+    .result {
+        padding: 0.5em;
+    }
 }
