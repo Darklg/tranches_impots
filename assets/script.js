@@ -140,7 +140,7 @@ function get_info_content(_tax, _id) {
     var _mensualite = Math.floor(_tax / 12);
     _html += '<p class="result-item">';
     _html += '<u>Revenu ' + _id + '</u><br/>';
-    _html += Math.floor(_tax) + '&euro;/an - ' + Math.floor(_mensualite) + '&euro;/mois';
+    _html += Math.floor(_tax) + '&nbsp;&euro;/an - ' + Math.floor(_mensualite) + '&nbsp;&euro;/mois';
     _html += '</p>';
 
     return _html;
@@ -152,21 +152,21 @@ function update_content() {
     /* Impots solo */
     _html += get_info_content(window.jsutaxes.tax1, 1);
     _html += get_info_content(window.jsutaxes.tax2, 2);
-    _html += '<p>Total: ' + Math.floor(window.jsutaxes.tax1 + window.jsutaxes.tax2) + '&euro;</p>';
+    _html += '<p>Total: ' + Math.floor(window.jsutaxes.tax1 + window.jsutaxes.tax2) + '&nbsp;&euro;</p>';
     document.getElementById('result_sep').innerHTML = _html;
 
     /* Half */
     var _html2 = '';
     _html2 += get_info_content(window.jsutaxes.taxhalf, 1);
     _html2 += get_info_content(window.jsutaxes.taxhalf, 2);
-    _html2 += '<p>Total: ' + Math.floor(window.jsutaxes.taxcommontotal) + '&euro;</p>';
+    _html2 += '<p>Total: ' + Math.floor(window.jsutaxes.taxcommontotal) + '&nbsp;&euro;</p>';
     document.getElementById('result_half').innerHTML = _html2;
 
     /* Part */
     var _html3 = '';
     _html3 += get_info_content(window.jsutaxes.taxpart1, 1);
     _html3 += get_info_content(window.jsutaxes.taxpart2, 2);
-    _html3 += '<p>Total: ' + Math.floor(window.jsutaxes.taxcommontotal) + '&euro;</p>';
+    _html3 += '<p>Total: ' + Math.floor(window.jsutaxes.taxcommontotal) + '&nbsp;&euro;</p>';
     document.getElementById('result_part').innerHTML = _html3;
 
 }
