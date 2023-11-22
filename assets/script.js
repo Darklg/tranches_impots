@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var $childcount = document.getElementById('childcount');
 
     var _events = ['keyup', 'keydown'];
-    Array.prototype.forEach.call(document.querySelectorAll('input[data-watch-change]'), function(el, i) {
+    Array.prototype.forEach.call(document.querySelectorAll('input[data-watch-change]'), function(el) {
         for (var _ev in _events) {
             el.addEventListener(_events[_ev], compute_taxes, 1);
         }
